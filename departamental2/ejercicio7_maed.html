@@ -363,7 +363,67 @@
 
                   </div>
                   <div class="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel" aria-labelledby="custom-tabs-one-messages-tab">
-                     Masa
+                     
+                    <div class="row">
+                       <div class="col-md-6">
+                        <div class="form-group">
+                          <input type="number" class="form-control" id="masa1" placeholder="Digite el número 1" value="0" onchange="cambiarMasa()" onkeyup="cambiarMasa()">
+                        </div>
+                       </div>
+                       <div class="col-md-6">
+                        <div class="form-group">
+                          <input type="number" class="form-control" id="masa2" placeholder="Digite el número 2" value="0" onchange="cambiarMasa()" onkeyup="cambiarMasa()">
+                        </div>
+                       </div>
+                     </div>
+
+                     <div class="row">
+                       <div class="col-md-6">
+                        <div class="form-group">
+                          <select class="form-control" id="selectMasa1" onchange="cambiarSelectMasa1()">
+                            <option value="tonelada">Tonelada</option>
+                            <option value="kilogramo">Kilogramo</option>
+                            <option value="gramo">Gramo</option>
+                            <option value="miligramo">Miligramo</option>
+                            <option value="macrogramo">Macrogramo</option>
+                            <option value="toneladalarga">Tonelada Larga</option>
+                            <option value="toneladacorta">Tonelada Corta</option>
+                            <option value="stone">Stone</option>
+                            <option value="libra">Libra</option>
+                            <option value="onza">Onza</option>
+                          </select>
+                        </div>
+                       </div>
+                       <div class="col-md-6">
+                        <div class="form-group">
+                          <select class="form-control" id="selectMasa2" onchange="cambiarSelectMasa2()">
+                            <option value="tonelada">Tonelada</option>
+                            <option value="kilogramo">Kilogramo</option>
+                            <option value="gramo">Gramo</option>
+                            <option value="miligramo">Miligramo</option>
+                            <option value="macrogramo">Microgramo</option>
+                            <option value="toneladalarga">Tonelada Larga</option>
+                            <option value="toneladacorta">Tonelada Corta</option>
+                            <option value="stone">Stone</option>
+                            <option value="libra">Libra</option>
+                            <option value="onza">Onza</option>
+                          </select>
+                        </div>
+                       </div>
+                     </div>
+
+                     <div class="row">
+                       <div class="col-md-12">
+                         
+                        <div class="alert alert-success alert-dismissible">
+                          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                          <h5>Formula</h5>
+                          <p id="formulaM"><p>
+                        </div>
+
+                       </div>
+                     </div>
+
                   </div>
                 </div>
               </div>
