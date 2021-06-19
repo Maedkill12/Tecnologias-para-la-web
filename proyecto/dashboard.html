@@ -117,7 +117,7 @@
                                     class="hide-menu">Desglose de créditos</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="alta-constancias.html" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span
-                                    class="hide-menu">Alta de asitencias</span></a></li>
+                                    class="hide-menu">Alta de constancias</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="login.html" aria-expanded="false"><i class="mdi mdi-border-inside"></i><span
                                     class="hide-menu">Salir</span></a></li>
@@ -181,8 +181,8 @@
                                             <span>Electiva 1</span>
                                         </div>
                                         <div class="progress mb-3">
-                                          <div class="progress-bar bg-success" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-                                               aria-valuemax="100" style="width: 100%">
+                                          <div id="electiva-1" class="progress-bar bg-success" role="progressbar" aria-valuenow="40" aria-valuemin="0"
+                                               aria-valuemax="100" style="width: 0%">
                                             
                                           </div>
                                         </div>
@@ -195,9 +195,9 @@
                                         <div class="d-flex no-block align-items-center">
                                             <span>Electiva 2</span>
                                         </div>
-                                        <div class="progress mb-3">
-                                          <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-                                               aria-valuemax="100" style="width: 25%">
+                                        <div class="progress mb-3" id="electiva2">
+                                          <div id="electiva-2" class="progress-bar bg-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0"
+                                               aria-valuemax="100" style="width: 0%">
                                             
                                           </div>
                                         </div>
@@ -209,9 +209,9 @@
                                         <div class="d-flex no-block align-items-center">
                                             <span>Electiva 3</span>
                                         </div>
-                                        <div class="progress mb-3">
-                                          <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-                                               aria-valuemax="100" style="width: 5%">
+                                        <div class="progress mb-3" id="electiva3">
+                                          <div id="electiva-3" class="progress-bar bg-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0"
+                                               aria-valuemax="100" style="width: 0%">
                                             
                                           </div>
                                         </div>
@@ -224,16 +224,16 @@
                                     <div class="card m-b-0">
                                         <div class="card-header bg-success" id="headingOne">
                                             
-                                          <h5 class="mb-0" style="color: #fff">
+                                          <h5 class="mb-0">
 
-                                            <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <a class="display-denominacion display-activo" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                 <span>Inquietudes vocacionales propias</span>
                                             </a>
                                           </h5>
                                         </div>
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                             <div class="card-body">
-                                            <table class="table" style="text-align:center;" border="1">
+                                            <table id="table-1" class="table" style="text-align:center;" border="1">
                                                 <thead bgcolor="#BDBDBD">
                                                   <tr>
                                                     <th scope="col">Modalidad</th>
@@ -242,41 +242,7 @@
                                                   </tr>
                                                 </thead>
                                                 <tbody>
-                                                  <tr>
-                                                    <td>Docencia</td>
-                                                    <td>
-                                                        <p>a)Cursos ofertados en las Unidades Académicas del IPN</p>
-                                                        <p>b)Estudio de una lengua extranjera que no se considere requisito de titulación</p>
-                                                        <!-- <p>c)Cursos de programas informáticos.</p>
-                                                        <p>d)Cursos de otras instituciones educativas con las que se tenga convenio.</p> -->
-                                                    </td>
-                                                    <td>
-                                                        1 crédito por cada 16 horas
-                                                    </td>
-                                                  </tr>
-                                                  <!-- <tr>
-                                                    <td>Trabajo de Campo Supervisado</td>
-                                                    <td>
-                                                        <p>a)Programa interinstitucional para el fortalecimiento de la investigación y el Posgrado del pacífico DELFIN</p>
-                                                        <p>b)Gestión de proyectos</p>
-                                                    </td>
-                                                    <td>
-                                                        1 crédito por cada 50 horas
-                                                    </td>
-                                                  </tr> -->
-                                                  <!-- <tr>
-                                                    <td>Independientes</td>
-                                                    <td>
-                                                        <p>a)Emprendedores: incubación de empresas</p>
-                                                        <p>b)Ferias nacionales e internacionales</p>
-                                                        <p>c)Conferencias</p>
-                                                        <p>d)Congresos</p>
-                                                        <p>e)Ponencias</p>
-                                                    </td>
-                                                    <td>
-                                                        1 crédito por cada 20 horas
-                                                    </td>
-                                                  </tr> -->
+                                                    
                                                 </tbody>
                                           </table>                                  </div>
                                         </div>
@@ -284,14 +250,14 @@
                                     <div class="card m-b-0 border-top">
                                         <div class="card-header bg-success" id="headingTwo">
                                           <h5 class="mb-0">
-                                            <a class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                <span style="color: #fff">Énfasis en la profesión</span>
+                                            <a class="collapsed display-denominacion" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <span>Énfasis en la profesión</span>
                                             </a>
                                           </h5>
                                         </div>
                                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                           <div class="card-body">
-                                            <table class="table" style="text-align:center;" border="1">
+                                            <table id="table-2" class="table" style="text-align:center;" border="1">
                                                 <thead bgcolor="#BDBDBD">
                                                   <tr>
                                                     <th scope="col">Modalidad</th>
@@ -300,41 +266,7 @@
                                                   </tr>
                                                 </thead>
                                                 <tbody>
-                                                  <tr>
-                                                    <td>Docencia</td>
-                                                    <td>
-                                                        <p>a)Unidades de Aprendizaje Optativas</p>
-                                                        <p>b)Unidades de Aprendizaje de otros Programas Académicos: Cambios de carrera, cambios de plan.</p>
-                                                        <p>Cursos, seminarios, talleres, diplomados, entre otros propios de la disciplina.</p>
-                                                    </td>
-                                                    <td>
-                                                        1 crédito por cada 16 horas
-                                                    </td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td>Trabajo de Campo Supervisado</td>
-                                                    <td>
-                                                        <p>a)Prácticas profesionales</p>
-                                                        <p>b)Estancias en empresas</p>                                                        </p>
-                                                        <p>c)Trabajos de investigación</p>
-                                                        <p>d)Asesorías</p>                                                        </p>
-                                                        <p>e)Consultorías</p>
-                                                    </td>
-                                                    <td>
-                                                        1 crédito por cada 50 horas
-                                                    </td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td>Independientes</td>
-                                                    <td>
-                                                        <p>a)Concursos</p>
-                                                        <p>b)Asistencia a congresos</p>
-                                                        <p>c)Simuladores</p>
-                                                    </td>
-                                                    <td>
-                                                        1 crédito por cada 20 horas
-                                                    </td>
-                                                  </tr>
+                                                    
                                                 </tbody>
                                           </table>                                            </div>
                                         </div>
@@ -342,15 +274,15 @@
                                     <div class="card m-b-0 border-top">
                                         <div class="card-header bg-success" id="headingThree">
                                           <h5 class="mb-0">
-                                            <a class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <a class="collapsed display-denominacion" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                                 
-                                                <span style="color: #fff">Complementarias a la formación</span>
+                                                <span>Complementarias a la formación</span>
                                             </a>
                                           </h5>
                                         </div>
                                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                           <div class="card-body">
-                                            <table class="table" style="text-align:center;" border="1">
+                                            <table id="table-3" class="table" style="text-align:center;" border="1">
                                                 <thead bgcolor="#BDBDBD">
                                                   <tr>
                                                     <th scope="col">Modalidad</th>
@@ -359,40 +291,7 @@
                                                   </tr>
                                                 </thead>
                                                 <tbody>
-                                                  <tr>
-                                                    <td >Docencia</td>
-                                                    <td>
-                                                        <p>a)Taller de algún área artistica o cultural</p>
-                                                    </td>
-                                                    <td>
-                                                        1 crédito por cada 16 horas
-                                                    </td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td>Trabajo de Campo Supervisado</td>
-                                                    <td>
-                                                        <p>a)Servicios comunitarios</p>
-                                                        <p>b)Programas de beneficio social</p>                                                        </p>
-                                                        <p>c)Competencias deportivas en diferentes torneos</p>
-                                                        <p>d)Presentación de obras culturales</p>                                                        </p>
-                                                        <p>e)Club de arte</p>
-                                                        <p>f)Alumno tutor</p>                                                        </p>
-                                                        <p>g)Apoyo a las unidades académicas</p>
-                                                    </td>
-                                                    <td>
-                                                        1 crédito por cada 50 horas
-                                                    </td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td>Independientes</td>
-                                                    <td>
-                                                        <p>a)Exposiciones de arte nacional e internacional</p>                                                        </p>
-                                                        <p>b)Competencias deportivas</p>
-                                                    </td>
-                                                    <td>
-                                                        1 crédito por cada 20 horas
-                                                    </td>
-                                                  </tr>
+                                                    
                                                 </tbody>
                                           </table>                                             </div>
                                         </div>
@@ -448,6 +347,9 @@
     <script src="../../dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="../../dist/js/custom.min.js"></script>
+
+    <script type="text/javascript" src="js/displayTable.js"></script>
+    <script type="text/javascript" src="js/dashboard.js"></script>
 </body>
 
 </html>

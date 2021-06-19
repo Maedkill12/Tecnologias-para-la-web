@@ -15,6 +15,8 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
     <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../../assets/extra-libs/multicheck/multicheck.css">
+    <link href="../../assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
     <link href="../../dist/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -118,7 +120,7 @@
                                     class="hide-menu">Desglose de créditos</span></a></li>
                         <li class="sidebar-item selected"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="alta-constancias.html" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span
-                                    class="hide-menu">Alta de asitencias</span></a></li>
+                                    class="hide-menu">Alta de constancias</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link active"
                                 href="login.html" aria-expanded="false"><i class="mdi mdi-border-inside"></i><span
                                     class="hide-menu">Salir</span></a></li>
@@ -171,282 +173,171 @@
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <div class="col-12">
-                        
-                        
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title">Alta de Constancias</h5>
-
-                                <button type="button" class="btn btn-success margin-5 text-white" data-toggle="modal" data-target="#Modal2" style="float: right;">
-                                    Nueva constancia
-                                </button>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Basic Datatable</h5>
+                            <button type="button" class="btn btn-success margin-5 text-white" id="nuevaConstancia" style="float: right; margin-bottom: 10px">
+                                Nueva constancia
+                            </button>
+                            <div class="table-responsive" style="clear: both;">
+                                <table id="zero_config" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre de la actividad</th>
+                                            <th>Fecha</th>
+                                            <th>Horas</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Nombre de la actividad</th>
+                                            <th>Fecha</th>
+                                            <th>Horas</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
                             </div>
-                                
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table id="zero_config" class="table table-striped table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th>Nombre de la actividad</th>
-                                                <th>Fecha</th>
-                                                <th>Horas</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Curso de Android</td>
-                                                <td>23-12-2020</td>
-                                                <td>20</td>
-                                                <td>
-                                                    <a class="btn btn-cyan btn-sm text-white" data-toggle="modal" data-target="#Modal2-actualizar" href="#">
-                                                        <i class="fas fa-pencil-alt">
-                                                        </i>
-                                                    </a>
-                                                    <a class="btn btn-danger btn-sm text-white" data-toggle="modal" data-target="#Modal2-default" href="#">
-                                                        <i class="fas fa-trash">
-                                                        </i>    
-                                                    </a>
-                                                </td>  
-                                            </tr>
-                                            <tr>
-                                                <td>Curso de React</td>
-                                                <td>30-04-2021</td>
-                                                <td>20</td>
-                                                <td>
-                                                    <a class="btn btn-cyan btn-sm text-white" data-toggle="modal" data-target="#Modal2-actualizar" href="#">
-                                                        <i class="fas fa-pencil-alt">
-                                                        </i>
-                                                    </a>
-                                                    <a class="btn btn-danger btn-sm text-white" data-toggle="modal" data-target="#Modal2-default" href="#">
-                                                        <i class="fas fa-trash">
-                                                        </i>    
-                                                    </a>
-                                                </td> 
-                                            </tr>
-                                            <tr>
-                                                <td>Curso de Flutter</td>
-                                                <td>16-09-2020</td>
-                                                <td>30</td>
-                                                <td>
-                                                    <a class="btn btn-success btn-sm text-white" data-toggle="modal" data-target="#modal-validada" href="#">
-                                                        </i>
-                                                        Validada    
-                                                    </a>
-                                                  </td> 
-                                            </tr>
-                                            <tr>
-                                                <td>Curso de React Native</td>
-                                                <td>13-12-2019</td>
-                                                <td>25</td> 
-                                                <td>
-                                                    <a class="btn btn-danger btn-sm text-white" data-toggle="modal" data-target="#modal-rechazada" href="#">
-                                                    </i>
-                                                    Rechazada    
-                                                </a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Nombre de la actividad</th>
-                                                <th>Fecha</th>
-                                                <th>Horas</th>
-                                                <th>Acciones</th>
 
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
-
-                                <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Subir constancia</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                      <div class="form-group">
-                                                        <label>Nombre de la actividad</label>
-                                                        <input type="text" class="form-control" id="nombre" placeholder="Digite nombre de la actividad">
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="row">
-                                                    <div class="col-6">
-                                                      <div class="form-group">
-                                                          <label>Fecha de inicio</label>
-                                                          <div class="input-group">
-                                                            <input type="text" class="form-control" id="datepicker-autoclose" placeholder="mm/dd/aaaa">
-                                                            <div class="input-group-append">
-                                                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-6">
-                                                      <div class="form-group">
-                                                          <label>Fecha de termino</label>
-                                                          <div class="input-group">
-                                                            <input type="text" class="form-control" id="datepicker-autoclose" placeholder="mm/dd/aaaa">
-                                                            <div class="input-group-append">
-                                                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="row">
-                                                    <div class="col-2">
-                                                      <div class="form-group">
-                                                        <label>Horas</label>
-                                                        <input type="number" class="form-control" id="hour" value="16">
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="row">
-                                                    <div class="col-6">
-                                                      <div class="form-group">
-                                                        <label>Archivo (solo una constancia y en .pdf)</label>
-                                                          <div class="input-group">
-                                                           <div class="custom-file">
-                                                              <input type="file" class="custom-file-input" id="exampleInputFile">
-                                                              <label class="custom-file-label" for="exampleInputFile">constancias1.pdf</label>
-                                                           </div>
-                                                          </div>
-                                                      </div>   
-                                                    </div>
-                                                  </div>
-                                                  <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="form group">
-                                                          <label>Observaciones</label>
-                                                          <textarea class="form-control" rows="6" placeholder="Ingrese las observaciones que considere necesarias"></textarea>
-                                                        </div>
-                                                    </div>
-                                                  </div>
-                                            </div>
-
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                <button type="button" class="btn btn-success">Guardar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="modal fade" id="Modal2-actualizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Modificar constancia</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                      <div class="form-group">
-                                                        <label>Nombre de la actividad</label>
-                                                        <input type="text" class="form-control" id="nombre" placeholder="Digite nombre de la actividad">
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="row">
-                                                    <div class="col-6">
-                                                      <div class="form-group">
-                                                          <label>Fecha de inicio</label>
-                                                          <div class="input-group">
-                                                            <input type="text" class="form-control" id="datepicker-autoclose" placeholder="mm/dd/aaaa">
-                                                            <div class="input-group-append">
-                                                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-6">
-                                                      <div class="form-group">
-                                                          <label>Fecha de termino</label>
-                                                          <div class="input-group">
-                                                            <input type="text" class="form-control" id="datepicker-autoclose" placeholder="mm/dd/aaaa">
-                                                            <div class="input-group-append">
-                                                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="row">
-                                                    <div class="col-2">
-                                                      <div class="form-group">
-                                                        <label>Horas</label>
-                                                        <input type="number" class="form-control" id="hour" value="16">
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="row">
-                                                    <div class="col-6">
-                                                      <div class="form-group">
-                                                        <label>Archivo (solo una constancia y en .pdf)</label>
-                                                          <div class="input-group">
-                                                           <div class="custom-file">
-                                                              <input type="file" class="custom-file-input" id="exampleInputFile">
-                                                              <label class="custom-file-label" for="exampleInputFile">constancias1.pdf</label>
-                                                           </div>
-                                                          </div>
-                                                      </div>   
-                                                    </div>
-                                                  </div>
-                                                  <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="form group">
-                                                          <label>Observaciones</label>
-                                                          <textarea class="form-control" rows="6" placeholder="Ingrese las observaciones que considere necesarias"></textarea>
-                                                        </div>
-                                                    </div>
-                                                  </div>
-                                            </div>
-
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                <button type="button" class="btn btn-success">Guardar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="modal fade" id="Modal2-default" >
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">Eliminar constancia</h4>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                  <span aria-hidden="true">&times;</span>
-                                                </button>
-                                              </div>
-                                              <div class="modal-body">
-                                                <p>¿Deseas realmente eliminar la constancia?</p>
-                                              </div>
-                                              <div class="modal-footer justify-content-between">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                <button type="button" class="btn btn-danger">Eliminar</button>
-                                              </div>
-                        
-                                            </div>
-                                            <!-- /.modal-content -->
-                                          </div>
-                                    </div>
-                                </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- modals -->
+                <!-- alta -->
+                <div class="modal fade " style="display: none;" id="Modal1" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true ">
+                    <div class="modal-dialog" role="document ">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Subir constancia</h5>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-label="Close">
+                                    <span aria-hidden="true ">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                
+                                <div class="card">
+                                    <div class="card-body">
+                                        <!-- <h5 class="card-title mb-0">Form Elements</h5> -->
+                                        <form id="upload">
+                                            <div class="form-group mt-3">
+                                                <label><b>Nombre de la actividad</b></label>
+                                                <input type="text" class="form-control date-inputmask" name="nombreActividad"
+                                                    placeholder="Digite el nombre de la actividad">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label><b>Fecha de inicio</b></label>
+                                                        <input type="date" class="form-control phone-inputmask" name="fechaInicio"
+                                                            placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label><b>Fecha de termino</b></label>
+                                                        <input type="date" class="form-control international-inputmask"
+                                                            name="fechaTermino" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label><b>Horas</b></label>
+                                                <input type="number" class="form-control xphone-inputmask" name="horas"
+                                                    placeholder="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label><b>Archivo (Solo una constancia y en .pdf)</b></label>
+                                                <input type="file" class="form-control purchase-inputmask" name="archivo"
+                                                    placeholder="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label><b>Observaciones</b></label>
+                                                <textarea class="form-control purchase-inputmask" name="observaciones"
+                                                    placeholder=""></textarea>
+                                            </div>
+                                            <button type="submit" id="guardar" class="btn btn-primary">Guardar</button>
+                                            <input type="hidden" name="accion" value="subir">
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- modificar -->
+                <div class="modal fade " style="display: none;" id="Modal2" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true ">
+                    <div class="modal-dialog" role="document ">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Actualizar constancia</h5>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-label="Close">
+                                    <span aria-hidden="true ">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                
+                                <div class="card">
+                                    <div class="card-body">
+                                        <!-- <h5 class="card-title mb-0">Form Elements</h5> -->
+                                        <form id="update">
+                                            <div class="form-group mt-3">
+                                                <label><b>Nombre de la actividad</b></label>
+                                                <input type="text" class="form-control date-inputmask" name="nombreActividad"
+                                                    placeholder="Digite el nombre de la actividad">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label><b>Fecha de inicio</b></label>
+                                                        <input type="date" class="form-control phone-inputmask" name="fechaInicio"
+                                                            placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label><b>Fecha de termino</b></label>
+                                                        <input type="date" class="form-control international-inputmask"
+                                                            name="fechaTermino" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label><b>Horas</b></label>
+                                                <input type="number" class="form-control xphone-inputmask" name="horas"
+                                                    placeholder="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label><b>Archivo (Solo una constancia y en .pdf)</b></label>
+                                                <input type="file" class="form-control purchase-inputmask" name="archivo"
+                                                    placeholder="" >
+                                            </div>
+                                            <div class="form-group">
+                                                <label><b>Observaciones</b></label>
+                                                <textarea class="form-control purchase-inputmask" name="observaciones"
+                                                    placeholder=""></textarea>
+                                            </div>
+                                            <button type="submit" id="guardar2" class="btn btn-primary">Guardar</button>
+                                            <input type="hidden" name="accion" value="actualizar">
+                                            <input type="hidden" name="id" >
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -494,6 +385,18 @@
     <script src="../../dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="../../dist/js/custom.min.js"></script>
+    <script src="../../assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
+    <script src="../../assets/extra-libs/multicheck/jquery.multicheck.js"></script>
+    <script src="../../assets/extra-libs/DataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="js/alta-constancias.js"></script>
+    <script>
+        /****************************************
+         *       Basic Table                   *
+         ****************************************/
+        $('#zero_config').DataTable();
+    </script>
+
+    <!-- <div class="modal-backdrop fade show"></div> -->
 </body>
 
 </html>

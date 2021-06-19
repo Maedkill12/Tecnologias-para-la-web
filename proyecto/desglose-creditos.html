@@ -118,7 +118,7 @@
                                     class="hide-menu">Desglose de créditos</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="alta-constancias.html" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span
-                                    class="hide-menu">Alta de asitencias</span></a></li>
+                                    class="hide-menu">Alta de constancias</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="login.html" aria-expanded="false"><i class="mdi mdi-border-inside"></i><span
                                     class="hide-menu">Salir</span></a></li>
@@ -182,7 +182,7 @@
                             <div class="card m-b-0">
                                 <div class="card-header bg-success" id="headingOne">
                                   <h5 class="mb-0">
-                                    <a  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <a class="display-denominacion display-activo" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         <i class="m-r-5 fa fa-magnet" aria-hidden="true"></i>
                                         <span>Electiva 1</span>
                                     </a>
@@ -191,42 +191,24 @@
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                   <div class="card-body">
                                     <div class="table-responsive">
-                                        <table id="zero_config" class="table table-striped table-bordered">
+                                        <table id="electiva-1" class="table table-striped table-bordered">
                                             <thead bgcolor="#BDBDBD">
                                                 <tr>
                                                     <th><b>Constancia</b></th>
                                                     <th><b>Eje temático</b></th>
                                                     <th><b>Modalidad</b></th>
-                                                    <th><b>Horas totales</b></th>
                                                     <th><b>Horas usadas</b></th>
                                                     <th><b>Equivalencia en horas</b></th>
                                                     <th><b>Créditos</b></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>Curso de React</td>
-                                                    <td>Énfasis en la profesión</td>
-                                                    <td>Docencia</td>
-                                                    <td>40</td>
-                                                    <td>40</td>
-                                                    <td>16</td>
-                                                    <td>2.5</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Curso de android</td>
-                                                    <td>Énfasis en la profesión</td>
-                                                    <td>Docencia</td>
-                                                    <td>64</td>
-                                                    <td>56</td>
-                                                    <td>16</td>
-                                                    <td>3.5</td>
-                                                </tr>
+
                                             </tbody>
                                             <tfoot>
                                                 <tr>
-                                                    <th  colspan="6"><b>Total:</b></th>
-                                                    <td><b>6.0</b></td>
+                                                    <th  colspan="5"><b>Total:</b></th>
+                                                    <td><b class="total">0</b></td>
                                                 </tr>
                                             </tfoot>
                                         </table>
@@ -237,7 +219,7 @@
                             <div class="card m-b-0 border-top">
                                 <div class="card-header bg-success" id="headingTwo">
                                   <h5 class="mb-0">
-                                    <a class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <a class="collapsed display-denominacion" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         <i class="m-r-5 fa fa-magnet" aria-hidden="true"></i>
                                         <span>Electiva 2</span>
                                     </a>
@@ -246,42 +228,24 @@
                                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                   <div class="card-body">
                                     <div class="table-responsive">
-                                        <table id="zero_config" class="table table-striped table-bordered">
+                                        <table id="electiva-2" class="table table-striped table-bordered">
                                             <thead bgcolor="#BDBDBD">
                                                 <tr>
                                                     <th><b>Constancia</b></th>
                                                     <th><b>Eje temático</b></th>
                                                     <th><b>Modalidad</b></th>
-                                                    <th><b>Horas totales</b></th>
                                                     <th><b>Horas usadas</b></th>
                                                     <th><b>Equivalencia en horas</b></th>
                                                     <th><b>Créditos</b></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>Curso de React</td>
-                                                    <td>Énfasis en la profesión</td>
-                                                    <td>Docencia</td>
-                                                    <td>40</td>
-                                                    <td>40</td>
-                                                    <td>16</td>
-                                                    <td>2.5</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Curso de android</td>
-                                                    <td>Énfasis en la profesión</td>
-                                                    <td>Docencia</td>
-                                                    <td>64</td>
-                                                    <td>56</td>
-                                                    <td>16</td>
-                                                    <td>3.5</td>
-                                                </tr>
+                                                
                                             </tbody>
                                             <tfoot>
                                                 <tr>
-                                                    <th  colspan="6"><b>Total:</b></th>
-                                                    <td><b>6.0</b></td>
+                                                    <th  colspan="5"><b>Total:</b></th>
+                                                    <td><b class="total">0</b></td>
                                                 </tr>
                                             </tfoot>
                                         </table>
@@ -292,7 +256,7 @@
                             <div class="card m-b-0 border-top">
                                 <div class="card-header bg-success" id="headingThree">
                                   <h5 class="mb-0">
-                                    <a class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <a class="collapsed display-denominacion" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                         <i class="m-r-5 fa fa-magnet" aria-hidden="true"></i>
                                         <span>Electiva 3</span>
                                     </a>
@@ -301,42 +265,23 @@
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                   <div class="card-body">
                                     <div class="table-responsive">
-                                        <table id="zero_config" class="table table-striped table-bordered">
+                                        <table id="electiva-3" class="table table-striped table-bordered">
                                             <thead bgcolor="#BDBDBD">
                                                 <tr>
                                                     <th><b>Constancia</b></th>
                                                     <th><b>Eje temático</b></th>
                                                     <th><b>Modalidad</b></th>
-                                                    <th><b>Horas totales</b></th>
                                                     <th><b>Horas usadas</b></th>
                                                     <th><b>Equivalencia en horas</b></th>
                                                     <th><b>Créditos</b></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>Curso de React</td>
-                                                    <td>Énfasis en la profesión</td>
-                                                    <td>Docencia</td>
-                                                    <td>40</td>
-                                                    <td>40</td>
-                                                    <td>16</td>
-                                                    <td>2.5</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Curso de android</td>
-                                                    <td>Énfasis en la profesión</td>
-                                                    <td>Docencia</td>
-                                                    <td>64</td>
-                                                    <td>56</td>
-                                                    <td>16</td>
-                                                    <td>3.5</td>
-                                                </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr>
-                                                    <th  colspan="6"><b>Total:</b></th>
-                                                    <td><b>6.0</b></td>
+                                                    <th  colspan="5"><b>Total:</b></th>
+                                                    <td><b class="total">0</b></td>
                                                 </tr>
                                             </tfoot>
                                         </table>
@@ -396,6 +341,9 @@
     <script src="../../dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="../../dist/js/custom.min.js"></script>
+
+    <script type="text/javascript" src="js/displayTable.js"></script>
+    <script type="text/javascript" src="js/desglose-creditos.js"></script>
 </body>
 
 </html>
